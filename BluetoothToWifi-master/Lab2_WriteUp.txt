@@ -1,0 +1,43 @@
+Atraya Mukherjee 101144456
+Raveena Jadhav 1000833967
+
+
+CSE 4340
+
+
+Lab 2 - Bluetooth to Wifi
+
+This application exchanges the ip addresses of two ANDROID devices through bluetooth and sends files over wifi. 
+
+Instructions:
+1. Load project into Android Studio
+2. Compile and run from Android Studio onto each of the two Android devices  
+3. Start the application on both of the devices
+4. App will ask for permission to make device available to other bluetooth devices, press allow/yes
+5. Press “Scan for devices” on both devices to find the other bluetooth device
+6. On one device, select the other device and press “Start Connection” when it appears to establish a connection
+7. The screen should switch to the wifi page, press "Send IP address" on BOTH devices and make sure that both devices say "Connecting to ____" and the ip address of the other device
+8. First, press receive on the device the files will be sent to to open connection.
+9. Then after, press send on the other device that will send files to establish connection.
+10. A file picker will pop up and select one or more files you wish to send over to the other device.
+11. After sending, a pop up will appear on the sending device that says "Files sent to" and then IP address of the other device, and a pop will appear on the receiving device saying "Files saved to /mnt/sdcard/Mobile Systems" At this point, the file observer will also notify if a file has been created. If you modify the file, it will detect and notify that there has been a modification of the file. 
+12. Check the files folder of the device to see the files that were received in a folder called "Mobile Systems"
+13. You'll be able to send files back and forth between the two devices as long as Receive is pressed first and then Send.
+14. If you want to send the modified file , it is the same procedure as sending.  
+
+
+Bugs/Limitations:
+   * Limited to Android devices
+   * The app should ask you if you want to turn on bluetooth if it’s initially off before the app starts, but if it crashes, just turn on bluetooth on the phone before restarting the app.
+   * If the screen doesn't say "Connecting to ___" with the ip address of the connecting device, the ip addresses were not exchanged.
+   * Some android devices don't have a file manager app, like the Nexus, so it may crash because it can't find the "/mnt/sdcard/Mobile Systems" directory. The app is designed to make the directory if it doesn't exist, but if not, you'll have to manually go into the Files from settings -> storage and create a folder called "Mobile Systems" there. 
+
+
+Resources:
+https://github.com/angads25/android-filepicker/wiki/filepicker-dialog
+https://www.mytrendin.com/transfer-files-local-wifi-network-using-tcp-connection-android/
+https://stackoverflow.com/questions/48675119/how-to-use-fileobserver
+
+
+
+
